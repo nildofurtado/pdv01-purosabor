@@ -51,7 +51,7 @@
 <div class="col-md-6">
   <div class="form-group">
   <label for="nascimento">Data de nascimento</label>
-  <input type="date" name="nascimento" class="form-control" placeholder="Data de Nascimento" aria-describedby="basic-addon1" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"  />
+  <input type="date" name="nascimento" class="form-control" placeholder="Data de Nascimento" aria-describedby="basic-addon1" value="1988-01-01" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"  />
   </div>
 </div>
 </div>
@@ -78,7 +78,8 @@
 
   <div class="form-group">
   <label for="cidade">Cidade</label>
-  <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade" aria-describedby="basic-addon1">
+  <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade"
+         aria-describedby="basic-addon1" value="Foz do Iguacu">
   </div>
 
   <div class="form-group">
@@ -99,12 +100,12 @@
 	<option value="MG">Minas Gerais</option>
 	<option value="PA">Pará</option>
 	<option value="PB">Paraíba</option>
-	<option value="PR">Paraná</option>
+	<option value="PR" selected="selected">Paraná</option>
 	<option value="PE">Pernambuco</option>
 	<option value="PI">Piauí</option>
 	<option value="RJ">Rio de Janeiro</option>
 	<option value="RN">Rio Grande do Norte</option>
-	<option value="RS" selected="selected">Rio Grande do Sul</option>
+	<option value="RS">Rio Grande do Sul</option>
 	<option value="RO">Rondônia</option>
 	<option value="RR">Roraima</option>
 	<option value="SC">Santa Catarina</option>

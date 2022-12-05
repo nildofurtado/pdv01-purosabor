@@ -78,6 +78,7 @@ class VendasController extends Controller
                 }
 
             }
+
             return response()->json([
                 'success' => "true",
                 'NT' => $transacao->id,

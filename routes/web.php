@@ -30,6 +30,11 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'Admin'], function () {
     Route::post('/estoque/save', 'EstoqueController@cadastrar')->name('estoque.save');
     Route::get('/estoque/todos', 'EstoqueController@lista')->name('estoque.todos');
 
+    /* ALIMENTICIO */
+    Route::get('/estoque/alimento/cadastrar', 'EstoqueAlimentarController@index')->name('estoque.alimento.cadastrar');
+    Route::post('/estoque/alimento/save', 'EstoqueAlimentarController@cadastrar')->name('estoque.alimento.save');
+    Route::get('/estoque/alimento/todos', 'EstoqueAlimentarController@lista')->name('estoque.alimento.todos');
+
     /*Parametros de atributos */
     Route::get('/estoque/modal', 'EstoqueController@viewModal')->name('estoque.atributos.modal');
     Route::post('/estoque/somente-add', 'EstoqueController@addAtributo')->name('estoque.atributos.add');
@@ -44,6 +49,14 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'Admin'], function () {
     Route::post('ap/estoque/', 'EstoqueController@saveEditar')->name('estoque.api.save');
     Route::post('ap/estoque/delete', 'EstoqueController@APIapagar')->name('estoque.api.delete');
     Route::post('ap/estoque/find', 'EstoqueController@APIprocurarEstoqueID')->name('estoque.api.estoqueID');
+
+//    //API ESTOQUE alimentos
+//    Route::get('ap/estoque/alimentos/', 'EstoqueController@APIListar')->name('estoque.api.listar');
+//    Route::post('ap/estoque/alimentos/disponivel', 'EstoqueController@APIDisponivel')->name('estoque.api.disponivel');
+//    Route::get('ap/estoque/alimentos/{id}', 'EstoqueController@APIFind')->name('estoque.api.find');
+//    Route::post('ap/estoque/alimentos/', 'EstoqueController@saveEditar')->name('estoque.api.save');
+//    Route::post('ap/estoque/alimentos/delete', 'EstoqueController@APIapagar')->name('estoque.api.delete');
+//    Route::post('ap/estoque/alimentos/find', 'EstoqueController@APIprocurarEstoqueID')->name('estoque.api.estoqueID');
 
     //API Clientes
     Route::get('ap/cliente/', 'ClientesController@APIListar')->name('cliente.api.listar');

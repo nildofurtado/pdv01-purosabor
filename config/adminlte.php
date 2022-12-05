@@ -186,8 +186,19 @@ return [
             'icon' => 'list-alt',
         ],
         [
+            'text' => 'Estoque Alimentos',
+            'url'  => 'estoque/alimento/todos',
+            'icon' => 'list-alt',
+        ],
+        [
             'text' => 'Cadastro de item',
             'url'  => 'estoque/cadastrar',
+            'icon' => 'plus-circle',
+            'icon_color' => 'red',
+        ],
+        [
+            'text' => 'Cadastro de Alimento',
+            'url'  => 'estoque/alimento/cadastrar',
             'icon' => 'plus-circle',
             'icon_color' => 'red',
         ],

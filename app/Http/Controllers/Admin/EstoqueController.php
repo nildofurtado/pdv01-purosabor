@@ -95,6 +95,14 @@ class EstoqueController extends Controller
         ->paginate(100);
         return view('admin.estoque.todos',['estoque'=>$estoque]);
     }
+
+    public function lista_alimentos(){
+        $estoque =   DB::table('estoques')
+                       ->leftjoin('estoque_auxes', 'estoque_auxes.codigo_estoque','=', 'estoques.codigo')
+                       ->addSelect('*','estoques.estoque as estoque_total')
+                       ->paginate(100);
+        return view('admin.estoque.todos',['estoque'=>$estoque]);
+    }
     
     public function viewAlterarAtributo(){
         $categoria = Categoria::all();
